@@ -117,7 +117,7 @@ function templateSVGRutas(reversa, funcionClick = false, eventClick) {
   contenedorSvgMetro.innerHTML = `<svg viewBox="0 0 1961.9 686.9" style="enable-background:new 0 0 1961.9 686.9;" xmlns="http://www.w3.org/2000/svg" id="svgPrueba" ><image href="https://www.eltiempo.com/infografias/2023/11/metro/pngAnimation/trazo-${
     numeroScroll - 1
   }.png?et12031719"
-  x="-11"
+  x="-10"
   y="-7"
   id="IconoMetros"
   class="metroIcono">
