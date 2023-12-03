@@ -327,25 +327,25 @@ li {
 }
 
 #mapaSolo {
-  visibility: hidden;
-  opacity: 0;
-  position: fixed;
-  top: 75%;
-  left: 50%;
-  translate: -50% -50%;
- 
- 
-  width: 100px;
-  width: min(90%, 400px);
-  border-radius: 10px;
-  transition: opacity .3s ease-in-out;
- 
-  &.active {
-   visibility: initial;
-   opacity: 1;
-  }
+ visibility: hidden;
+ opacity: 0;
+ position: fixed;
+ top: 75%;
+ left: 50%;
+ translate: -50% -50%;
+
+
+ width: 100px;
+ width: min(90%, 400px);
+ border-radius: 10px;
+ transition: opacity .3s ease-in-out;
+
+ &.active {
+  visibility: initial;
+  opacity: 1;
  }
- 
- .enLaParada {
-  background: #fc6e53 !important;
- }
+}
+
+.enLaParada {
+ background: #fc6e53 !important;
+}

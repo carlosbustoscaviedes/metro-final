@@ -23,10 +23,7 @@ const estaciones = {
   estacion6: 'colaManiobras',
 };
 
- 
-
 let puntosMetros = document.querySelectorAll('.puntos_reset');
-
 
 function cambiarColorParadas(params) {
   puntosMetros.forEach((e) => e.classList.remove('st5'));
@@ -76,7 +73,7 @@ function templateSVGRutas(reversa, funcionClick = false, eventClick) {
     `${pathDuration[`path${numeroScroll - 1}`]}s`
   );
   // Renderizar todo el svg para que cargue el camino y se vea una animación.
-  contenedorSvgMetro.innerHTML = `<svg viewBox="0 0 1961.9 686.9" style="enable-background:new 0 0 1961.9 686.9;" xmlns="http://www.w3.org/2000/svg" id="svgPrueba" ><image href="./pngAnimation/trazo-${
+  contenedorSvgMetro.innerHTML = `<svg viewBox="0 0 1961.9 686.9" style="enable-background:new 0 0 1961.9 686.9;" xmlns="http://www.w3.org/2000/svg" id="svgPrueba" ><image href="https://www.eltiempo.com/infografias/2023/11/metro/pngAnimation/trazo-${
     numeroScroll - 1
   }.png"
   x="-12"
@@ -124,7 +121,6 @@ function templateSVGRutas(reversa, funcionClick = false, eventClick) {
       //   /*---document.querySelectorAll('.modalCarlos')[numeroScroll - 2].style.display = 'flex'---*/
       //   );
       $('.modal_galeria_metro').css('display', 'block'),
-      
         galeriaCarlos(numeroScroll - 1),
         $('.pantalla_bloqueo').css('display', 'block');
 
@@ -133,9 +129,7 @@ function templateSVGRutas(reversa, funcionClick = false, eventClick) {
     }, tiempoDuracion);
   }
 
-
-
-  console.log(numeroScroll)
+  console.log(numeroScroll);
   //* -> Para una parada anterior
   if (numeroScroll == 6) {
     //* -> Para una parada Despues
@@ -199,7 +193,6 @@ const pathDuration = {
 
 function galeriaCarlos(posicion) {
   $('.modal_galeria_metro').css('display', 'block');
-  
 
   /*---------------llamar JSON-------------*/
   var UrlData =
@@ -254,7 +247,7 @@ function galeriaCarlos(posicion) {
 
         setTimeout(function () {
           $('.contenedor_iframe').css('z-index', '2');
-          $("#imagen_iframe_1").css('display', 'block')
+          $('#imagen_iframe_1').css('display', 'block');
         }, 1500);
 
         $('.logo_360').css('display', 'block');
@@ -563,27 +556,13 @@ $('.imagen_de_inicio_especial').click(function (event) {
 
 /*-----------------abrir nota principal------------------*/
 
-
-
-
-
-
-
-
-
-
-
 /*----------------------VER CREDITOS---------------------*/
-$(".texto_creditos_metro").click(function(event) {
-
-  $("#base_notas").css('display', 'none');
-  $("#base_creditos").css('display', 'block');
+$('.texto_creditos_metro').click(function (event) {
+  $('#base_notas').css('display', 'none');
+  $('#base_creditos').css('display', 'block');
 });
 
-
-$("#regresar_a_otras_notas").click(function(event) {
-
-  $("#base_notas").css('display', 'block');
-  $("#base_creditos").css('display', 'none');
-
+$('#regresar_a_otras_notas').click(function (event) {
+  $('#base_notas').css('display', 'block');
+  $('#base_creditos').css('display', 'none');
 });

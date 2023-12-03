@@ -37,13 +37,17 @@ const estacionesMobile = {
   estacion8: 'parada-6',
 };
 
-
-if( $(window).width() < 650 ){
-  $("#mapa").attr('src', 'https://www.eltiempo.com/infografias/2023/11/videos_metro/Mapas/mapa-bogota-back-mobile-min.jpg?88889')
-}else{
- $("#mapa").attr('src', 'https://www.eltiempo.com/infografias/2023/11/videos_metro/Mapas/mapa-bogota-back-min.jpg?et11888')
+if ($(window).width() < 650) {
+  $('#mapa').attr(
+    'src',
+    'https://www.eltiempo.com/infografias/2023/11/videos_metro/Mapas/mapa-bogota-back-mobile-min.jpg?88889'
+  );
+} else {
+  $('#mapa').attr(
+    'src',
+    'https://www.eltiempo.com/infografias/2023/11/videos_metro/Mapas/mapa-bogota-back-min.jpg?et11888'
+  );
 }
-
 
 let puntosMetros = document.querySelectorAll('.circulo_de_parada');
 
@@ -110,9 +114,9 @@ function templateSVGRutas(reversa, funcionClick = false, eventClick) {
     `${pathDuration[`path${numeroScroll - 1}`]}s`
   );
   // Renderizar todo el svg para que cargue el camino y se vea una animación.
-  contenedorSvgMetro.innerHTML = `<svg viewBox="0 0 1961.9 686.9" style="enable-background:new 0 0 1961.9 686.9;" xmlns="http://www.w3.org/2000/svg" id="svgPrueba" ><image href="./pngAnimation/trazo-${
+  contenedorSvgMetro.innerHTML = `<svg viewBox="0 0 1961.9 686.9" style="enable-background:new 0 0 1961.9 686.9;" xmlns="http://www.w3.org/2000/svg" id="svgPrueba" ><image href="https://www.eltiempo.com/infografias/2023/11/metro/pngAnimation/trazo-${
     numeroScroll - 1
-  }.png?et113015"
+  }.png?et12031719"
   x="-11"
   y="-7"
   id="IconoMetros"
@@ -141,7 +145,7 @@ function templateSVGRutas(reversa, funcionClick = false, eventClick) {
       .querySelector('image')
       .setAttribute(
         'href',
-        `./pngAnimation/fin-trazo-${numeroScroll - 1}.png?et113015`
+        `./pngAnimation/fin-trazo-${numeroScroll - 1}.png?et12031719`
       );
   }
 
@@ -188,20 +192,13 @@ function templateSVGRutas(reversa, funcionClick = false, eventClick) {
 
       /*------letreros mobile----------*/
 
- 
-      
-
-      
-        
-
       galeriaCarlos(numeroScroll - 1);
-      
+
       setTimeout(() => {
         if (numeroScroll == 4 || numeroScroll == 6) {
           $('.pantalla_bloqueo, .modal_galeria_metro').css('display', 'none');
           document.getElementById('mapaSolo').classList.add('active');
         } else {
-
           //$('.modal_galeria_metro').animate({ transform: 'scale(1.3)' }, 400);
           $('.pantalla_bloqueo, .modal_galeria_metro').css('display', 'block');
           document.getElementById('mapaSolo').classList.remove('active');
@@ -290,10 +287,6 @@ const pathDuration = {
 		*/
 
 function galeriaCarlos(posicion) {
-
-
-  
-
   if ($(window).width() < 650) {
     $('.alinear_izquierda').attr(
       'src',
@@ -314,7 +307,7 @@ function galeriaCarlos(posicion) {
 
   /*---------------llamar JSON-------------*/
   var UrlData =
-    'https://www.eltiempo.com/infografias/2023/11/metro/data/data.json?999999999999';
+    'https://www.eltiempo.com/infografias/2023/11/metro/data/data.json?et1203171999999';
 
   let contenedor = $('.contenedor_infinito');
 
@@ -345,8 +338,6 @@ function galeriaCarlos(posicion) {
       }
     }
 
-
-    
     /*--------slider------*/
     let anchoBaseSlider = 1000;
 
@@ -475,9 +466,6 @@ function galeriaCarlos(posicion) {
       }
     });
 
-
-
-
     $('.Fderecha').click(function (event) {
       if (num >= 1 && num <= datos[posicion].fotos.length) {
         num -= 1;
@@ -581,15 +569,11 @@ function galeriaCarlos(posicion) {
       $('#contenedor_video1').css('display', 'none');
       $('.contenedor_slider').css('display', 'none');
 
-      if( $(window).width() > 650 ){
-
+      if ($(window).width() > 650) {
         $('#video_normal').css('display', 'block');
-      
-      }else{
-
+      } else {
         $('#video_normal').css('display', 'flex');
       }
-      
 
       $('.logo_360').css('display', 'none');
     });
@@ -655,7 +639,9 @@ function galeriaCarlos(posicion) {
 
     let id = $(this).attr('id');
     if (id === '8') {
-      $('.contenedorVistaMapa, .base_mapa_ruta, .estaciones_metro, .modal_galeria_metro, .pantalla_bloqueo').css('display', 'none');
+      $(
+        '.contenedorVistaMapa, .base_mapa_ruta, .estaciones_metro, .modal_galeria_metro, .pantalla_bloqueo'
+      ).css('display', 'none');
 
       /*---conetenedor puertas----*/
       $('.contenedor_titulo_metro').css('display', 'none');
@@ -682,16 +668,11 @@ function galeriaCarlos(posicion) {
       console.log(num);
 
       /*------reiniciar contenedor----*/
-      if( $(window).width() > 650 ){
-
-        $('div#contenedor_video1').css('display', 'block')
-      
-      }else{
-
-        $('div#contenedor_video1').css('display', 'flex')
+      if ($(window).width() > 650) {
+        $('div#contenedor_video1').css('display', 'block');
+      } else {
+        $('div#contenedor_video1').css('display', 'flex');
       }
-     
-
 
       $('.contenedor_slider, #video_normal').css('display', 'none');
       $('.icono_video, .icono_foto').css('transform', 'scale(1)');
@@ -923,9 +904,9 @@ $('.imagen_de_inicio_especial').click(function (event) {
   setTimeout(function () {
     $('.contenedor_nota_metro').css('z-index', '3');
 
-    $('.contenedor_puertas').css('z-index', '2'); 
+    $('.contenedor_puertas').css('z-index', '2');
 
-    $(".base_otras_notas").css('display', 'block');
+    $('.base_otras_notas').css('display', 'block');
 
     //$('.contenedor_titulo_metro').css('z-index', '3');
 
