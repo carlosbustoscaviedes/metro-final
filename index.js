@@ -306,8 +306,8 @@ function galeriaCarlos(posicion) {
   */
 
   /*---------------llamar JSON-------------*/
-  var UrlData =
-    'https://www.eltiempo.com/infografias/2023/11/metro/data/data.json?et12031214299999';
+  var UrlData = './data/data.json?et12031214299999';
+  // var UrlData =    'https://www.eltiempo.com/infografias/2023/11/metro/data/data.json?et12031214299999';
 
   let contenedor = $('.contenedor_infinito');
 
@@ -552,7 +552,10 @@ function galeriaCarlos(posicion) {
       }
 
       /*---poner VIDEO normal--*/
-      $('#video_metro_normal').attr('src', `${video}`);
+      // $('#video_metro_normal').attr('src', `${video}`);
+      document.getElementById(
+        'video_normal'
+      ).innerHTML = `<iframe src="https://www.youtube.com/embed/${video}?version=3&autoplay=1&loop=1&mute=1" title="YouTube video player" frameborder="0" id="video_metro_normal" allow="autoplay;" allowfullscreen class="video3D"></iframe>`;
 
       $('.icono_video').attr(
         'src',
