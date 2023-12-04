@@ -116,7 +116,7 @@ function templateSVGRutas(reversa, funcionClick = false, eventClick) {
   // Renderizar todo el svg para que cargue el camino y se vea una animación.
   contenedorSvgMetro.innerHTML = `<svg viewBox="0 0 1961.9 686.9" style="enable-background:new 0 0 1961.9 686.9;" xmlns="http://www.w3.org/2000/svg" id="svgPrueba" ><image href="https://www.eltiempo.com/infografias/2023/11/metro/pngAnimation/trazo-${
     numeroScroll - 1
-  }.png?et12031719"
+  }.png?et120312142"
   x="-10"
   y="-7"
   id="IconoMetros"
@@ -145,7 +145,7 @@ function templateSVGRutas(reversa, funcionClick = false, eventClick) {
       .querySelector('image')
       .setAttribute(
         'href',
-        `./pngAnimation/fin-trazo-${numeroScroll - 1}.png?et12031719`
+        `./pngAnimation/fin-trazo-${numeroScroll - 1}.png?et120312142`
       );
   }
 
@@ -307,7 +307,7 @@ function galeriaCarlos(posicion) {
 
   /*---------------llamar JSON-------------*/
   var UrlData =
-    'https://www.eltiempo.com/infografias/2023/11/metro/data/data.json?et1203171999999';
+    'https://www.eltiempo.com/infografias/2023/11/metro/data/data.json?et12031214299999';
 
   let contenedor = $('.contenedor_infinito');
 
